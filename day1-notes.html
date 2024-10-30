@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics in Bangla</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-5 mx-10">
+    
+    <h1 class="text-blue-600 text-2xl mb-5">১. CSS সিনট্যাক্স ও গঠন</h1>
+    <p class="text-gray-700 mb-2">
+        CSS (Cascading Style Sheets) হল HTML উপাদানগুলোকে সাজানোর জন্য ব্যবহৃত। এর মৌলিক গঠন হল সিলেক্টর এবং ডিক্লারেশন ব্লক:
+    </p>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        সিলেক্টর {
+          প্রপার্টি: মান;
+        }
+    </pre>
+    <p class="text-gray-700 mb-2">উদাহরণ:</p>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        h1 {
+          color: blue;  /* রঙ নীল */
+          font-size: 24px;  /* আকার ২৪ পিক্সেল */
+        }
+    </pre>
+    <p class="text-gray-700 mb-2">এখানে:</p>
+    <ul class="list-disc ml-5 text-gray-700">
+        <li>সিলেক্টর: <code>h1</code> (সব &lt;h1&gt; উপাদানকে লক্ষ্য করে)</li>
+        <li>প্রপার্টিস: <code>color</code> ও <code>font-size</code></li>
+        <li>মান: <code>blue</code> এবং <code>24px</code></li>
+    </ul>
+
+    <h2 class="text-blue-600 text-xl mt-5">২. CSS-এর প্রকার</h2>
+    <ul class="list-disc ml-5 text-gray-700 mb-5">
+        <li><strong>ইনলাইন CSS:</strong> HTML উপাদানের মধ্যে সরাসরি <code>style</code> অ্যাট্রিবিউট দিয়ে যুক্ত করা হয়।
+            <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+                &lt;h1 style="color: blue;"&gt;হ্যালো বিশ্ব&lt;/h1&gt;
+            </pre>
+        </li>
+        <li><strong>অভ্যন্তরীণ CSS:</strong> HTML ডকুমেন্টের <code>&lt;head&gt;</code> অংশে <code>&lt;style&gt;</code> ট্যাগের মধ্যে লেখা হয়।
+            <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+                &lt;style&gt;
+                  h1 {
+                    color: blue;
+                  }
+                &lt;/style&gt;
+            </pre>
+        </li>
+        <li><strong>এক্সটার্নাল CSS:</strong> একটি পৃথক <code>.css</code> ফাইলে লেখা হয় এবং HTML ডকুমেন্টে লিঙ্ক করা হয়।
+            <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+                &lt;link rel="stylesheet" href="styles.css"&gt;
+            </pre>
+        </li>
+    </ul>
+
+    <h2 class="text-blue-600 text-xl mt-5">৩. সিলেক্টর ও স্পেসিফিসিটি</h2>
+    <p class="text-gray-700 mb-2">
+        সিলেক্টর হল প্যাটার্ন যা নির্দিষ্ট উপাদানগুলোকে লক্ষ্য করতে ব্যবহৃত হয়। কিছু সাধারণ সিলেক্টর:
+    </p>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        p {
+          color: green; /* সব প্যারাগ্রাফকে সবুজ রঙে সাজাবে */
+        }
+    </pre>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        .example {
+          font-weight: bold; /* বোল্ড লেখা */
+        }
+    </pre>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        #unique {
+          font-size: 30px; /* ৩০ পিক্সেল আকার */
+        }
+    </pre>
+    <p class="text-gray-700 mb-2">
+        স্পেসিফিসিটি নির্ধারণ করে কোন CSS নিয়মটি কার্যকর হবে যখন একই উপাদানের জন্য বিভিন্ন স্টাইল প্রয়োগ করা হয়। স্পেসিফিসিটির ক্রম:
+    </p>
+    <ul class="list-disc ml-5 text-gray-700 mb-5">
+        <li>ইনলাইন স্টাইল (সর্বোচ্চ)</li>
+        <li>আইডি</li>
+        <li>ক্লাস, অ্যাট্রিবিউট, ও pseudo-classes</li>
+        <li>এলিমেন্ট ও pseudo-elements (সর্বনিম্ন)</li>
+    </ul>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        #header {
+          color: red; /* আইডি সিলেক্টর */
+        }
+        .header {
+          color: blue; /* ক্লাস সিলেক্টর */
+        }
+        h1 {
+          color: green; /* এলিমেন্ট সিলেক্টর */
+        }
+    </pre>
+    <p class="text-gray-700 mb-2">
+        যদি একটি &lt;h1&gt; আইডি header এবং ক্লাস header উভয়ই থাকে, তবে সেটি লাল (red) হবে কারণ আইডির স্পেসিফিসিটি বেশি।
+    </p>
+
+    <h2 class="text-blue-600 text-xl mt-5">৪. বক্স মডেল</h2>
+    <p class="text-gray-700 mb-2">
+        বক্স মডেল হল CSS-এ উপাদানগুলো কিভাবে গঠিত হয় তা বর্ণনা করে। প্রতিটি উপাদান একটি বক্স হিসেবে বিবেচিত হয়, যা চারটি অংশ নিয়ে গঠিত:
+    </p>
+    <ul class="list-disc ml-5 text-gray-700 mb-5">
+        <li>কনটেন্ট: যেখানে টেক্সট এবং ইমেজ থাকে।</li>
+        <li>প্যাডিং: কনটেন্ট ও বর্ডারের মধ্যে ফাঁকা জায়গা (বক্সের ভিতরে)।</li>
+        <li>বর্ডার: প্যাডারের চারপাশের রেখা (যদি থাকে)।</li>
+        <li>মার্জিন: বর্ডারের বাইরের ফাঁকা জায়গা, অন্য উপাদানগুলো থেকে আলাদা করে।</li>
+    </ul>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        div {
+          margin: 20px;  /* বাইরের ফাঁকা জায়গা */
+          border: 2px solid black; /* বর্ডার */
+          padding: 15px; /* ভিতরের ফাঁকা জায়গা */
+        }
+    </pre>
+
+    <h2 class="text-blue-600 text-xl mt-5">সারাংশ</h2>
+    <ul class="list-disc ml-5 text-gray-700 mb-5">
+        <li>CSS সিনট্যাক্স: সিলেক্টর + ডিক্লারেশন ব্লক</li>
+        <li>CSS প্রকার: ইনলাইন, অভ্যন্তরীণ, এক্সটার্নাল</li>
+        <li>সিলেক্টর: এলিমেন্ট, ক্লাস, আইডি</li>
+        <li>স্পেসিফিসিটি: কোন স্টাইল প্রয়োগ হবে তা নির্ধারণ করে</li>
+        <li>বক্স মডেল: কনটেন্ট, প্যাডিং, বর্ডার, মার্জিন</li>
+    </ul>
+
+    <a href="./index.html" class="text-white bg-green-500 px-4 py-2 rounded hover:bg-green-600 transition duration-300">Back Roadmap</a>
+</body>
+</html>
