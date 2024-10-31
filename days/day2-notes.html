@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics in Bangla</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-5 mx-10">
+    
+    <h1 class="text-blue-600 text-2xl mb-5">১. ফন্ট প্রপার্টিজ</h1>
+    <p class="text-gray-700 mb-2">
+        CSS-এ টেক্সটের ফন্টের বৈশিষ্ট্য নির্ধারণ করতে কিছু মূল প্রপার্টি ব্যবহার করা হয়:
+    </p>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        font-family: টেক্সটের জন্য কোন ফন্ট ব্যবহার করতে হবে তা নির্ধারণ করে।
+        
+        p {
+          font-family: Arial, sans-serif; /* Arial ফন্ট, না থাকলে sans-serif */
+        }
+        
+        font-size: টেক্সটের আকার নির্ধারণ করে।
+        
+        h2 {
+          font-size: 32px; /* ৩২ পিক্সেল আকার */
+        }
+        
+        font-weight: টেক্সটের ওজন বা ঘনত্ব নির্ধারণ করে (bold, normal, 100-900)।
+        
+        strong {
+          font-weight: bold; /* বোল্ড লেখা */
+        }
+        
+        font-style: টেক্সটের স্টাইল নির্ধারণ করে (normal, italic, oblique)।
+        
+        em {
+          font-style: italic; /* ইটালিক লেখা */
+        }
+    </pre>
+
+    <h2 class="text-blue-600 text-xl mt-5">২. টেক্সট এলাইনমেন্ট ও ডেকোরেশন</h2>
+    <p class="text-gray-700 mb-2">
+        টেক্সট কিভাবে সজ্জিত হবে তা নির্ধারণ করে:
+    </p>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        text-align: টেক্সটের অবস্থান (left, right, center, justify)।
+
+        h1 {
+          text-align: center; /* কেন্দ্রের দিকে সজ্জিত */
+        }
+        
+        text-decoration: টেক্সটের উপরিভাগের সাজসজ্জা (underline, overline, line-through, none)।
+
+        a {
+          text-decoration: underline; /* আন্ডারলাইন */
+        }
+    </pre>
+
+    <h2 class="text-blue-600 text-xl mt-5">৩. ওয়েব ফন্টস</h2>
+    <p class="text-gray-700 mb-2">
+        CSS-এ বিভিন্ন ওয়েব ফন্ট ব্যবহার করা যায়। Google Fonts এর মত সেবা ব্যবহার করে সহজেই ফন্ট যোগ করা যায়।
+    </p>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;
+
+        body {
+          font-family: 'Roboto', sans-serif; /* Roboto ফন্ট ব্যবহার */
+        }
+    </pre>
+
+    <h2 class="text-blue-600 text-xl mt-5">৪. রেসপনসিভ টাইপোগ্রাফি</h2>
+    <p class="text-gray-700 mb-2">
+        মোবাইল ও ডেস্কটপে ভিন্নভাবে দেখানোর জন্য, মিডিয়া কুয়েরি ব্যবহার করা হয়:
+    </p>
+    <pre class="bg-gray-200 p-3 rounded overflow-x-auto">
+        h1 {
+          font-size: 24px; /* ছোট স্ক্রীনে */
+        }
+
+        @media (min-width: 768px) {
+          h1 {
+            font-size: 36px; /* বড় স্ক্রীনে */
+          }
+        }
+    </pre>
+
+    <h2 class="text-blue-600 text-xl mt-5">সারাংশ</h2>
+    <ul class="list-disc ml-5 text-gray-700 mb-5">
+        <li>ফন্ট প্রপার্টিজ: font-family, font-size, font-weight, font-style</li>
+        <li>টেক্সট এলাইনমেন্ট ও ডেকোরেশন: text-align, text-decoration</li>
+        <li>ওয়েব ফন্টস: Google Fonts বা অন্যান্য উৎস থেকে ফন্ট ব্যবহার</li>
+        <li>রেসপনসিভ টাইপোগ্রাফি: মিডিয়া কুয়েরি ব্যবহার করে ভিন্ন স্ক্রীনের জন্য ভিন্ন ফন্ট সাইজ নির্ধারণ</li>
+    </ul>
+
+    <a href="./index.html" class="text-white bg-green-500 px-4 py-2 rounded hover:bg-green-600 transition duration-300">Back Roadmap</a>
+</body>
+</html>

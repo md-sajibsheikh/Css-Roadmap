@@ -12,11 +12,19 @@
       .day-content {
         display: none;
       }
+      .sidebar {
+        height: 100vh; /* Full height */
+        overflow-y: auto; /* Scrollable */
+      }
+      .main-content {
+        max-height: calc(100vh - 80px); /* Space for header */
+        overflow-y: auto; /* Scrollable */
+      }
     </style>
   </head>
   <body class="bg-gray-100 flex">
     <!-- Sidebar -->
-    <div class="w-64 bg-white shadow-md">
+    <div class="sidebar w-64 bg-white shadow-md">
       <h2 class="text-xl font-bold p-4">Topics</h2>
       <ul class="p-4">
         <li>
@@ -98,10 +106,24 @@
     </div>
 
     <!-- Main Content -->
-    <div class="flex-1 pt-20 pl-20 pr-20">
-      <h1 class="text-2xl font-bold mb-4">CSS Mastery Roadmap</h1>
+    <div class="flex-1 pt-20 pl-20 pr-20 main-content">
+      <h1 class="text-2xl font-bold">CSS Mastery Roadmap</h1>
+      <div class="flex justify-end">
+        <a
+          id="resource-link"
+          href="day1-notes.html"
+          class="bg-green-500 text-white px-4 py-2 rounded mr-2"
+          >Resources</a
+        >
+        <a
+          id="task-link"
+          href="day1-tasks.html"
+          class="bg-blue-500 text-white px-4 py-2 rounded"
+          >Tasks</a
+        >
+      </div>
 
-      <div id="day1" class="day-content mb-6">
+      <div id="day1" class="day-content mb-1">
         <h2 class="text-2xl font-semibold">Day 1: CSS Fundamentals</h2>
         <ul>
           <li>CSS Syntax & Structure</li>
@@ -122,11 +144,6 @@
           >
             Next
           </button>
-          <a
-            href="day1-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
@@ -151,21 +168,16 @@
           >
             Next
           </button>
-          <a
-            href="day2-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day3" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 3: Colors & Backgrounds</h2>
         <ul>
-          <li>Color Values</li>
+          <li>Color Models (RGB, HEX, HSL)</li>
           <li>Background Properties</li>
           <li>Gradients</li>
-          <li>Opacity and Transparency</li>
+          <li>Background Images</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -180,11 +192,6 @@
           >
             Next
           </button>
-          <a
-            href="day3-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
@@ -192,9 +199,9 @@
         <h2 class="text-2xl font-semibold">Day 4: Box Model</h2>
         <ul>
           <li>Understanding the Box Model</li>
-          <li>Border Styles</li>
-          <li>Margin vs. Padding</li>
-          <li>Shorthand Properties</li>
+          <li>Margin, Padding, and Border</li>
+          <li>Box Sizing</li>
+          <li>Practical Applications</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -209,21 +216,16 @@
           >
             Next
           </button>
-          <a
-            href="day4-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day5" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 5: Layout Basics</h2>
         <ul>
-          <li>Display Property</li>
-          <li>Positioning Elements</li>
-          <li>Flexbox Basics</li>
-          <li>Grid Basics</li>
+          <li>Display Properties</li>
+          <li>Positioning (Static, Relative, Absolute, Fixed)</li>
+          <li>Overflow and Clearfix</li>
+          <li>Practical Layouts</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -238,21 +240,16 @@
           >
             Next
           </button>
-          <a
-            href="day5-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day6" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 6: Flexbox Layout</h2>
         <ul>
-          <li>Flex Container Properties</li>
-          <li>Flex Item Properties</li>
-          <li>Flexbox Alignment</li>
-          <li>Responsive Flexbox</li>
+          <li>Flex Container and Items</li>
+          <li>Flex Direction and Wrap</li>
+          <li>Justify Content and Align Items</li>
+          <li>Practical Flexbox Layouts</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -267,21 +264,16 @@
           >
             Next
           </button>
-          <a
-            href="day6-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day7" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 7: Grid Layout</h2>
         <ul>
-          <li>Defining Grid Structure</li>
-          <li>Grid Alignment</li>
-          <li>Responsive Grids</li>
-          <li>Grid vs. Flexbox</li>
+          <li>Grid Container and Items</li>
+          <li>Grid Template Columns and Rows</li>
+          <li>Gap and Alignment</li>
+          <li>Practical Grid Layouts</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -296,21 +288,16 @@
           >
             Next
           </button>
-          <a
-            href="day7-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day8" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 8: Advanced Techniques</h2>
         <ul>
-          <li>CSS Preprocessors</li>
-          <li>Custom Properties</li>
-          <li>CSS Methodologies</li>
-          <li>CSS in JS</li>
+          <li>CSS Transitions</li>
+          <li>CSS Transformations</li>
+          <li>Media Queries</li>
+          <li>Practical Examples</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -325,21 +312,16 @@
           >
             Next
           </button>
-          <a
-            href="day8-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day9" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 9: Projects</h2>
         <ul>
-          <li>Small Project Examples</li>
-          <li>Collaborative Projects</li>
-          <li>Portfolio Development</li>
-          <li>Real-World Applications</li>
+          <li>Personal Portfolio</li>
+          <li>Responsive Web Design</li>
+          <li>CSS Frameworks Overview</li>
+          <li>Implementing a CSS Framework</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -354,11 +336,6 @@
           >
             Next
           </button>
-          <a
-            href="day9-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
@@ -366,8 +343,8 @@
         <h2 class="text-2xl font-semibold">Day 10: Debugging</h2>
         <ul>
           <li>Common CSS Issues</li>
-          <li>Using Developer Tools</li>
-          <li>Debugging Techniques</li>
+          <li>Browser Developer Tools</li>
+          <li>Debugging Strategies</li>
           <li>Best Practices</li>
         </ul>
         <div class="flex justify-between mt-4">
@@ -383,21 +360,16 @@
           >
             Next
           </button>
-          <a
-            href="day10-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day11" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 11: Responsive Design</h2>
         <ul>
+          <li>Understanding Breakpoints</li>
+          <li>Fluid Layouts</li>
+          <li>Responsive Images</li>
           <li>Media Queries</li>
-          <li>Responsive Units</li>
-          <li>Mobile-First Approach</li>
-          <li>Testing Responsiveness</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -412,11 +384,6 @@
           >
             Next
           </button>
-          <a
-            href="day11-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
@@ -424,9 +391,9 @@
         <h2 class="text-2xl font-semibold">Day 12: CSS Animations</h2>
         <ul>
           <li>Animation Properties</li>
-          <li>Transitions</li>
           <li>Keyframes</li>
           <li>Animation Timing Functions</li>
+          <li>Practical Animation Examples</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -441,21 +408,16 @@
           >
             Next
           </button>
-          <a
-            href="day12-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day13" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 13: CSS Variables</h2>
         <ul>
-          <li>Understanding CSS Variables</li>
-          <li>Scope of Variables</li>
-          <li>Dynamic Values</li>
-          <li>Benefits of Using Variables</li>
+          <li>Introduction to CSS Variables</li>
+          <li>Using Variables in CSS</li>
+          <li>Benefits of CSS Variables</li>
+          <li>Practical Examples</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -470,21 +432,16 @@
           >
             Next
           </button>
-          <a
-            href="day13-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
       <div id="day14" class="day-content mb-6">
         <h2 class="text-2xl font-semibold">Day 14: Frameworks</h2>
         <ul>
-          <li>Introduction to CSS Frameworks</li>
-          <li>Popular Frameworks (Bootstrap, Tailwind)</li>
-          <li>When to Use a Framework</li>
-          <li>Creating Custom Styles</li>
+          <li>Overview of CSS Frameworks</li>
+          <li>Bootstrap</li>
+          <li>Tailwind CSS</li>
+          <li>Choosing the Right Framework</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -499,11 +456,6 @@
           >
             Next
           </button>
-          <a
-            href="day14-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
 
@@ -511,9 +463,9 @@
         <h2 class="text-2xl font-semibold">Day 15: Final Project</h2>
         <ul>
           <li>Project Overview</li>
-          <li>Planning Your Project</li>
-          <li>Execution and Presentation</li>
-          <li>Feedback and Improvement</li>
+          <li>Deliverables</li>
+          <li>Presentation Guidelines</li>
+          <li>Feedback and Final Review</li>
         </ul>
         <div class="flex justify-between mt-4">
           <button
@@ -526,28 +478,27 @@
             class="bg-blue-500 text-white px-4 py-2 rounded"
             onclick="showDay(1)"
           >
-            Next
+            Finish
           </button>
-          <a
-            href="day15-notes.html"
-            class="bg-green-500 text-white px-4 py-2 rounded"
-            >Notes</a
-          >
         </div>
       </div>
-
-      <script>
-        function showDay(day) {
-          const days = document.querySelectorAll(".day-content");
-          days.forEach((dayContent) => {
-            dayContent.style.display = "none";
-          });
-          document.getElementById("day" + day).style.display = "block";
-        }
-
-        // Show Day 1 by default
-        showDay(1);
-      </script>
     </div>
+
+    <script>
+      function showDay(day) {
+        const days = document.querySelectorAll(".day-content");
+        days.forEach((d) => {
+          d.style.display = "none";
+        });
+        document.getElementById("day" + day).style.display = "block";
+
+        // Update resource and task links dynamically
+        document.getElementById("resource-link").href =
+          `days/day${day}-notes.html`;
+        document.getElementById("task-link").href = `task/day${day}-tasks.html`;
+      }
+      // Show the first day on load
+      showDay(1);
+    </script>
   </body>
 </html>
