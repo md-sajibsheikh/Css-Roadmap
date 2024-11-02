@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>রঙ এবং পটভূমি</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f4f4f4; /* হালকা পটভূমি */
+      }
+    </style>
+  </head>
+  <body class="p-5">
+    <h1 class="text-3xl font-bold mb-5">রঙ এবং পটভূমি</h1>
+
+    <div class="mb-5 p-5 bg-red-500 text-white rounded">
+      <h2 class="text-2xl">রঙ মডেল (Color Models)</h2>
+      <h3>RGB:</h3>
+      <p>
+        RGB মানে রেড (Red), গ্রীন (Green), এবং ব্লু (Blue)। এই তিনটি রঙের
+        বিভিন্ন কম্বিনেশন দিয়ে অন্যান্য রঙ তৈরি হয়।
+      </p>
+      <p>
+        উদাহরণ: <span class="bg-red-600">rgb(255, 0, 0)</span> হল উজ্জ্বল লাল।
+      </p>
+
+      <h3>HEX:</h3>
+      <p>
+        HEX হল ১৬ সংখ্যা ভিত্তিক কোড যা সাধারণত ৬টি অক্ষর দিয়ে রঙ প্রকাশ করে।
+      </p>
+      <p>উদাহরণ: <span class="bg-green-500">#FF0000</span> হল লাল।</p>
+
+      <h3>HSL:</h3>
+      <p>
+        HSL মানে হিউ (Hue), স্যাটুরেশন (Saturation), এবং লুমিনেন্স (Lightness)।
+      </p>
+      <p>উদাহরণ: <span class="bg-blue-500">hsl(0, 100%, 50%)</span> হল লাল।</p>
+    </div>
+
+    <div class="mb-5 p-5 bg-gray-700 text-white rounded">
+      <h2 class="text-2xl">পটভূমি বৈশিষ্ট্য (Background Properties)</h2>
+      <p><code>background-color:</code> পটভূমির রঙ নির্ধারণ করে।</p>
+      <p><code>background-image:</code> পটভূমিতে চিত্র যোগ করে।</p>
+      <p><code>background-size:</code> চিত্রের আকার নিয়ন্ত্রণ করে।</p>
+      <p>
+        <code>background-repeat:</code> চিত্রটি পুনরাবৃত্তি হবে কিনা তা নির্ধারণ
+        করে।
+      </p>
+    </div>
+
+    <div
+      class="mb-5 p-5 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded"
+    >
+      <h2 class="text-2xl">গ্রেডিয়েন্ট (Gradients)</h2>
+      <p>গ্রেডিয়েন্ট হল দুটি বা তার বেশি রঙের মিশ্রণ যা একটি মসৃণ রূপে চলে।</p>
+      <p>
+        উদাহরণ:
+        <span class="text-white"
+          >background: linear-gradient(to right, red, blue);</span
+        >
+        যা একটি লিনিয়ার গ্রেডিয়েন্ট তৈরি করে।
+      </p>
+    </div>
+
+    <div class="mb-5 p-5 bg-gray-800 text-white rounded">
+      <h2 class="text-2xl">পটভূমি ছবি (Background Images)</h2>
+      <p>
+        পটভূমি ছবির মাধ্যমে আপনার ডিজাইনকে আরও প্রাণবন্ত এবং আকর্ষণীয় করা যায়।
+      </p>
+      <p>
+        উদাহরণ:
+        <span class="text-white">background-image: url('image.jpg');</span>
+      </p>
+    </div>
+
+    <div class="mb-5 p-5 bg-yellow-500 text-black rounded">
+      <h3 class="text-xl">পটভূমি হলুদ (background-color: yellow)</h3>
+    </div>
+
+    <div
+      class="mb-5 p-5 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded"
+    >
+      <h3 class="text-xl">লিনিয়ার গ্রেডিয়েন্ট: লাল থেকে নীল</h3>
+    </div>
+
+    <div
+      class="mb-5 p-5 bg-gradient-to-r from-yellow-500 to-green-500 text-white rounded"
+    >
+      <h3 class="text-xl">রেডিয়াল গ্রেডিয়েন্ট: হলুদ থেকে সবুজ</h3>
+    </div>
+
+    <a
+      href="https://md-sajibsheikh.github.io/Css-Roadmap/"
+      class="text-white bg-green-500 px-4 py-2 rounded hover:bg-green-600 transition duration-300 inline-block mt-5"
+      >Back Roadmap</a
+    >
+  </body>
+</html>
